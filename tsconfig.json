@@ -1,0 +1,20 @@
+{
+  "exclude": [
+    "lib",
+    "typings",
+    "node_modules",
+    "**/*.spec.ts"
+  ],
+  "compilerOptions": {
+    "target": "es5",
+    "declaration": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "outDir": "./lib"
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
