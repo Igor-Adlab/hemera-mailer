@@ -18,6 +18,7 @@ export interface ISendMailRequest {
     remote: IRemoteOptions;
     subject: string;
     template: string;
+    attachments?: Array<any>;
 }
 
 export const options = { name: 'hemera-mailer' };
@@ -33,12 +34,7 @@ export const plugin = HP((hemera, options: any, next: Function) => {
                 to: request.to,
                 from: request.from,
                 subject: request.subject,
-                dsn: {
-                    id: 'email.id',
-                    return: 'headers',
-                    notify: 'success',
-                    recipient: 'igor.olshevsky.live@gmail.com'
-                }
+                attachments: request.attachments || [],
             }, (err, info) => {
                 if(err) reject(err);
                 else resolve(info)
