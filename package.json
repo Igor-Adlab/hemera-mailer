@@ -1,6 +1,6 @@
 {
   "name": "hemera-mailer",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Hemera plugin for Send templated mail",
   "main": "lib/index.js",
   "scripts": {
